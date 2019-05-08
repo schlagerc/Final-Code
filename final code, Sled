@@ -1,0 +1,178 @@
+#include <Bounce2.h>
+
+const int kButtonPin1 = 1;
+const int kButtonPin2 = 2;
+const int kButtonPin3 = 3;
+const int kButtonPin4 = 4;
+const int kButtonPin5 = 5;
+const int kButtonPin6 = 6;
+const int kButtonPin7 = 7;
+const int kButtonPin8 = 8;
+const int kButtonPin9 = 9;
+const int kButtonPin10 = 10;
+const double kButtonInterval = 10;
+
+Bounce btn1 = Bounce();
+Bounce btn2 = Bounce();
+Bounce btn3 = Bounce();
+Bounce btn4 = Bounce();
+Bounce btn5 = Bounce();
+Bounce btn6 = Bounce();
+Bounce btn7 = Bounce();
+Bounce btn8 = Bounce();
+Bounce btn9 = Bounce();
+Bounce btn10 = Bounce();
+
+void setup() {
+
+ btn1.attach(kButtonPin1, INPUT_PULLUP);
+ btn1.interval(kButtonInterval);
+
+ btn2.attach(kButtonPin2, INPUT_PULLUP);
+ btn2.interval(kButtonInterval);
+ 
+ btn3.attach(kButtonPin3, INPUT_PULLUP);
+ btn3.interval(kButtonInterval);
+
+ btn4.attach(kButtonPin4, INPUT_PULLUP);
+ btn4.interval(kButtonInterval);
+
+ btn5.attach(kButtonPin5, INPUT_PULLUP);
+ btn5.interval(kButtonInterval);
+
+ btn6.attach(kButtonPin6, INPUT_PULLUP);
+ btn6.interval(kButtonInterval);
+
+ btn7.attach(kButtonPin7, INPUT_PULLUP);
+ btn7.interval(kButtonInterval);
+ 
+ btn8.attach(kButtonPin8, INPUT_PULLUP);
+ btn8.interval(kButtonInterval);
+ 
+ btn9.attach(kButtonPin9, INPUT_PULLUP);
+ btn9.interval(kButtonInterval);
+ 
+ btn10.attach(kButtonPin10, INPUT_PULLUP);
+ btn10.interval(kButtonInterval);
+ 
+ delay(500);
+}
+void loop() {
+
+ btn1.update();
+ btn2.update();
+ btn3.update();
+ btn4.update();
+ btn5.update();
+ btn6.update();
+ btn7.update();
+ btn8.update();
+ btn9.update();
+ btn10.update();
+
+ 
+ if ( btn1.fell() ) {
+
+ Keyboard.press('w'); 
+ }
+
+ 
+ if ( btn1.rose() ) {
+ 
+ Keyboard.release('w');
+ }
+
+ if ( btn2.fell() ) {
+
+ Keyboard.press('a'); 
+ }
+
+ 
+ if ( btn2.rose() ) {
+ 
+ Keyboard.release('a');
+ }
+ 
+ if ( btn3.fell() ) {
+
+ Keyboard.press('s'); 
+ }
+
+ 
+ if ( btn3.rose() ) {
+ 
+ Keyboard.release('s');
+ }
+ 
+ if ( btn4.fell() ) {
+
+ Keyboard.press('d'); 
+ }
+
+ 
+ if ( btn4.rose() ) {
+ 
+ Keyboard.release('d');
+ }
+ 
+ if ( btn5.fell() ) {
+
+ Keyboard.press('z'); 
+ }
+ 
+ if ( btn5.rose() ) {
+ 
+ Keyboard.release('z');
+ }
+ if ( btn6.fell() ) {
+
+ 
+ Keyboard.press(KEY_LEFT); 
+ }
+
+ if ( btn6.rose() ) {
+ 
+ Keyboard.release(KEY_LEFT);
+ }
+  
+ if ( btn7.fell() ) {
+
+ Keyboard.press(KEY_RIGHT); 
+ }
+ 
+ if ( btn7.rose() ) {
+ 
+ Keyboard.release(KEY_RIGHT);
+ }
+  if ( btn8.fell() ) {
+
+ Keyboard.press(KEY_UP); 
+ }
+
+ if ( btn8.rose() ) {
+ 
+ Keyboard.release(KEY_UP);
+ }
+ if ( btn9.fell() ) {
+
+ Keyboard.press(KEY_DOWN); 
+ }
+
+ if ( btn9.rose() ) {
+ 
+ Keyboard.release(KEY_DOWN);
+ }
+ if ( btn10.fell() ) {
+
+ Keyboard.press(KEY_SPACE); 
+ }
+
+ if ( btn10.rose() ) {
+ 
+ Keyboard.release(KEY_SPACE);
+ }
+}
+
+
+
+
